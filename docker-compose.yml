@@ -1,0 +1,16 @@
+services:
+  landing:
+    build:
+      context: ./mvplanding/mvp
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    restart: always
+
+  analyzer:
+    build:
+      context: ./mvpAnalyzer/mvp
+      dockerfile: Dockerfile
+    ports:
+      - "5177:80"
+    restart: always
