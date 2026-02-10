@@ -1,0 +1,60 @@
+/* src/TypeSelection.css */
+.selection-card {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.selection-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.selection-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.selection-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.75rem 2.5rem;
+    border-radius: 9999px;
+    /* Pill shape */
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    flex: 1;
+    /* Equal width buttons */
+    max-width: 150px;
+}
+
+.selection-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.selection-btn:active {
+    transform: translateY(0);
+}

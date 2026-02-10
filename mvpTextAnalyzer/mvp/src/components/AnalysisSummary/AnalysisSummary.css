@@ -1,0 +1,149 @@
+.summary-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    padding-bottom: 4rem;
+}
+
+.summary-container h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #111827;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #111827;
+}
+
+/* Card Style similar to DocumentAssistant */
+.summary-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+#summaryText,
+#detailsText {
+    line-height: 1.6;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.flag-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.flag-item {
+    background-color: #f9fafb;
+    border-left-width: 4px;
+    border-left-style: solid;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #374151;
+    line-height: 1.5;
+    border: 1px solid #f3f4f6;
+    border-left: 4px solid;
+    /* Reset to be overridden */
+}
+
+/* Specific Flag Colors */
+.red-flag {
+    border-left-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.orange-flag {
+    border-left-color: #f97316;
+    background-color: #fff7ed;
+}
+
+.yellow-flag {
+    border-left-color: #eab308;
+    background-color: #fefce8;
+}
+
+.blue-flag {
+    border-left-color: #3b82f6;
+    background-color: #eff6ff;
+}
+
+.purple-flag {
+    border-left-color: #a855f7;
+    background-color: #faf5ff;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .summary-container {
+        padding: 1rem;
+    }
+
+    .summary-card {
+        padding: 1.5rem;
+    }
+}

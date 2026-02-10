@@ -1,0 +1,132 @@
+/* ===== Root Layout ===== */
+
+.stage-container {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 40px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8fafc;
+}
+
+/* ===== Heading ===== */
+
+.section-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
+}
+
+/* ===== Main Chart Container ===== */
+
+.results-placeholder {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 420px;
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 24px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+/* Placeholder text (only visible before charts load) */
+.placeholder-text {
+    font-size: 16px;
+    color: #64748b;
+    text-align: center;
+}
+
+/* ===== Individual Chart Card ===== */
+
+.glass-panel {
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.75));
+    border-radius: 20px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-panel:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* ===== Animations ===== */
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Chart Canvas Fix ===== */
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 1024px) {
+    .results-placeholder {
+        padding: 24px;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stage-container {
+        padding: 24px 16px;
+    }
+
+    .section-heading {
+        font-size: 26px;
+    }
+
+    .results-placeholder {
+        border-radius: 18px;
+        padding: 20px;
+    }
+}
