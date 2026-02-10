@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    /* Offset for fixed navbar */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll only */
+    overflow-y: auto;
+    /* Ensure vertical scroll */
+    min-height: 100vh;
+}

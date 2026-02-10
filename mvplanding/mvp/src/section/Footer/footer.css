@@ -1,0 +1,105 @@
+.footer-container {
+    background-color: #fff;
+    padding: 80px 10% 40px;
+    /* Use percentage padding for responsiveness */
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-snap-align: start;
+    /* Snap to footer */
+    min-height: 100vh;
+    /* Make footer full screen to ensure it snaps correctly */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Align footer to the bottom */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+    /* Space between links and copyright */
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    margin: 0 0 8px 0;
+}
+
+.footer-column a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: underline;
+    /* Explicit underlining */
+    text-underline-offset: 4px;
+    /* Space between text and line */
+    font-weight: 400;
+    transition: opacity 0.2s ease;
+    width: fit-content;
+}
+
+.footer-column a:hover {
+    opacity: 0.7;
+}
+
+.footer-copyright {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 60px 20px 40px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .footer-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 40px;
+    }
+}

@@ -1,0 +1,88 @@
+.animation-section {
+    height: 400vh;
+    /* Reduced from 1500vh to speed up animation */
+    position: relative;
+    background-color: #fff;
+    /* scroll-snap-align: start; */
+    /* scroll-snap-stop: always;  */
+    /* Force stop at this section */
+}
+
+.animation-sticky-wrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.boundary {
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    border-radius: 40px;
+    /* Rounded corners */
+    position: relative;
+    overflow: hidden;
+    /* Clip animation inside */
+    background-color: #f8f8f8;
+    /* Optional: light bg to see the box */
+    display: flex;
+    /* Center content inside boundary */
+    justify-content: center;
+    align-items: center;
+}
+
+.purple-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #F2E7FB;
+    /* Adjust to match desired purple */
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.animation-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.animation-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 96px;
+    font-weight: 600;
+    margin-top: 120px;
+    margin-bottom: 10px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    line-height: 1.05;
+}
+
+.animation-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .animation-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .animation-content p {
+        font-size: 1.1rem;
+    }
+}

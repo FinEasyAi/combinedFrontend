@@ -1,0 +1,84 @@
+/* Loader.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Equalizer container */
+.loader-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 44px;
+}
+
+/* Bars */
+.loader-bars span {
+  width: 8px;
+  height: 100%;
+  background: #000000;
+  border-radius: 3px;
+
+  transform-origin: bottom;
+  animation: equalize 1.15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform;
+}
+
+/* Staggered delays for wave motion */
+.loader-bars span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loader-bars span:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.loader-bars span:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.loader-bars span:nth-child(4) {
+  animation-delay: 0.36s;
+}
+
+.loader-bars span:nth-child(5) {
+  animation-delay: 0.48s;
+}
+
+/* Keyframes */
+@keyframes equalize {
+  0% {
+    transform: scaleY(0.35);
+  }
+
+  50% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0.35);
+  }
+}
+
+/* Label */
+.loader-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: 0.04em;
+}

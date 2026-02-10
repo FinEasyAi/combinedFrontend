@@ -1,0 +1,155 @@
+.notify-container-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    background-color: #fff;
+    /* Match parent bg */
+    scroll-snap-align: start;
+    /* Snap to this section too */
+    min-height: 100vh;
+    /* Optional: Make it full screen if desired, or auto height */
+    align-items: center;
+}
+
+/* NOTIFY SECTION Styles */
+
+.notify-container {
+    background-color: #FDF6F3;
+    /* Light beige background */
+    border-radius: 40px;
+    padding: 100px 60px;
+    /* More breathable padding */
+    position: relative;
+    width: 100%;
+    max-width: 1050px;
+    /* Slightly narrower for focus */
+    margin: 0 auto 60px;
+    /* Centered with bottom margin */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width calculation */
+}
+
+/* Position balls in corners */
+.notify-ball-left {
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    height: 300px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.2;
+    /* Subtle background */
+    pointer-events: none;
+    z-index: 1;
+}
+
+.notify-ball-right {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    height: 300px;
+    /* Adjust size based on design */
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.notify-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 76px;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    line-height: 1.05;
+    position: relative;
+    z-index: 2;
+}
+
+.notify-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #555555;
+
+    max-width: 720px;
+    /* wider for hero balance */
+    margin: 0 auto 48px;
+
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+
+    text-align: center;
+}
+
+
+.notify-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 2;
+}
+
+.notify-input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    /* Subtle border */
+    border-radius: 8px;
+    /* Or purely rectangle if design dictates */
+    font-size: 16px;
+    outline: none;
+    background-color: #fff;
+}
+
+.notify-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 999px;
+    /* Pill shape */
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 100%;
+}
+
+.notify-button:hover {
+    transform: translateY(-2px);
+}
+
+
+.notify-footer {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-top: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.notify-footer a {
+    color: #000;
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .notify-title {
+        font-size: 32px;
+    }
+}
